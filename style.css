@@ -1,0 +1,604 @@
+/* Import Google Fonts -- Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+/* Import Google Fonts -- Poppins */
+
+/* Reset & Common Code Starts Here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #121728;
+  --secondary-color: #0b131f;
+  --padding: 0.5rem;
+  --transition: all 0.3s linear;
+  --border-radius: 0.6rem;
+  --box-shadow: 0.1rem 0.2rem 0.8rem #192138;
+  --common-color: #57606f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", serif;
+  background-color: #131313;
+  color: #ffffff;
+}
+
+.cart:hover {
+  box-shadow: 0.1rem 0.2rem 0.8rem rgba(114, 114, 114, 0.5);
+}
+/* Reset & Common Code Starts Here */
+
+.container {
+  width: 90%;
+  height: 92vh;
+  margin: 1rem auto;
+}
+
+/* Top Container Design Starts Here */
+.top_container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+/* Top Container Design Ends Here */
+
+/* Left Box Design Starts Here */
+.left_box {
+  width: 25%;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.left_box h4 {
+  margin: 0.7rem 1rem;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.left_box .playlist {
+  list-style-type: none;
+  margin: 2rem 1rem;
+}
+
+.left_box .playlist li {
+  font-size: 0.9rem;
+  list-style-type: none;
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+  color: var(--common-color);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.left_box .playlist li:first-child {
+  color: #00cec9;
+}
+
+.left_box .playlist li:hover {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.left_box .playlist .fa-music {
+  margin-right: 1rem;
+}
+
+.left_box .playlist .fa-circle {
+  font-size: 0.5rem;
+  margin-right: 1.4rem;
+}
+
+.playlist_hr {
+  border: 1px solid var(--common-color);
+  margin: 1rem 1rem 1rem;
+}
+
+.left_box .music_list {
+  height: 55vh;
+  width: 100%;
+  overflow: auto;
+}
+
+.left_box .music_list::-webkit-scrollbar {
+  display: none;
+}
+
+.music {
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.music:hover {
+  background-color: #192138;
+  cursor: pointer;
+}
+
+.music .music_number {
+  position: absolute;
+  margin: 0.9rem 1rem;
+  font-size: 0.8rem;
+  color: var(--common-color);
+}
+
+.music img {
+  margin-left: 3rem;
+  border-radius: 5px;
+  width: 2.9rem;
+  height: 7vh;
+}
+
+.title,
+.sub_title {
+  margin: 0.1rem 1rem;
+  width: 8rem;
+
+  /* Wow This Code is Awesome */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Wow This Code is Awesome */
+}
+
+.title {
+  font-size: 0.9rem;
+}
+
+.sub_title {
+  color: var(--common-color);
+  font-size: 0.8rem;
+  margin-top: -0.2rem;
+}
+
+.fa-circle-play {
+  position: absolute;
+  right: 1rem;
+  top: 0.4rem;
+  font-size: 1.4rem;
+}
+/* Left Box Design Ends Here */
+
+/* Right Box Design Starts Here */
+.right_box {
+  min-width: 75%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.right_box .alan_img {
+  width: 45%;
+  position: absolute;
+  top: -1.5rem;
+  right: 10rem;
+  opacity: 0.6;
+}
+
+.right_top {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  z-index: 999999;
+  position: relative;
+}
+
+.right_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+
+.right_list li {
+  list-style-type: none;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  color: var(--common-color);
+  transition: var(--transition);
+}
+
+.right_list li:nth-child(1) {
+  color: white;
+  border-bottom: 1px solid rgb(4, 252, 252);
+}
+
+.right_list li:hover {
+  cursor: pointer;
+  color: white;
+  border-bottom: 1px solid rgb(4, 252, 252);
+}
+
+.right_search {
+  position: absolute;
+  left: 40%;
+  top: 0.9rem;
+  width: 40%;
+}
+
+.right_logo img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 2rem;
+  top: 0.9rem;
+  transition: var(--transition);
+}
+
+.right_logo img:hover {
+  border: 1px solid #00cec9;
+  cursor: pointer;
+}
+
+/* This is a Amazing Search Bar Wow */
+.right_search input {
+  width: 100%;
+  position: relative;
+  background-color: rgba(184, 184, 184, 0.2);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 0.4rem 2rem;
+  border-radius: 10px;
+}
+/* This is a Amazing Search Bar Wow */
+
+.right_search .fa-magnifying-glass {
+  position: absolute;
+  z-index: 9999;
+  color: var(--common-color);
+  left: 0.5rem;
+  top: 0.3rem;
+}
+
+.right_middle {
+  width: 57%;
+  height: 30%;
+  margin: 1.5rem;
+}
+
+.right_middle h2 {
+  font-weight: 600;
+}
+
+.right_middle p {
+  font-size: 0.8rem;
+  margin: 0.4rem 0;
+  color: var(--common-color);
+}
+
+.btn {
+  width: 6rem;
+  padding: var(--padding);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.play_btn {
+  background-color: rgb(4, 252, 252);
+  color: var(--common-color);
+  transition: var(--transition);
+  border: none;
+  margin-right: 0.4rem;
+}
+
+.play_btn:hover {
+  color: black;
+}
+
+.follow_btn {
+  background-color: transparent;
+  border: none;
+  color: rgb(4, 252, 252);
+  border: 1px solid rgb(4, 252, 252);
+  transition: var(--transition);
+}
+
+.follow_btn:hover {
+  background-color: rgb(4, 252, 252);
+  color: black;
+}
+
+.right_popular {
+  width: 100%;
+  height: 33%;
+  z-index: 9999999999;
+  display: flex;
+  margin: 0rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.song_arrow {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  right: 3.3rem;
+}
+
+.arrow i {
+  margin: 0 0.5rem;
+}
+
+.right_popular .popular_music {
+  display: flex;
+  overflow: auto;
+  transition: var(--transition);
+}
+
+.popular_music::-webkit-scrollbar {
+  display: none;
+}
+
+.musics {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0rem;
+  transition: var(--transition);
+}
+
+.popular_music h4 {
+  margin-bottom: 0.7rem;
+}
+
+.popular_music img {
+  width: 5rem;
+  border-radius: 5px;
+}
+
+.music_title {
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 7rem;
+}
+
+.music_author {
+  font-size: 0.7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 7rem;
+}
+
+.right_artists {
+  width: 100%;
+  height: 33%;
+  margin: 0rem 1.5rem;
+}
+
+.popular_artist {
+  display: flex;
+  overflow: auto;
+  transition: var(--transition);
+}
+
+.popular_artist::-webkit-scrollbar {
+  display: none;
+}
+
+.popular_artist img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5px;
+}
+
+.artist {
+  margin: 0.5rem 0;
+}
+
+.artist_name {
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 7rem;
+}
+/* Right Box Design Ends Here */
+
+/* Bottom Container Design Starts Here */
+.bottom_container {
+  width: 100%;
+  height: 10%;
+}
+/* Bottom Container Design Ends Here */
+
+/* Footer Box Design Starts Here */
+.footer_box {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  box-shadow: 0.1rem 0.2rem 0.8rem #192138;
+  display: flex;
+  position: relative;
+}
+
+.footer_box .box {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.footer_box .box1 span:nth-child(1) {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.5rem;
+  background-color: #00cec9;
+  margin-top: 2rem;
+}
+
+.footer_box .box1 span:nth-child(2) {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.9rem;
+  background-color: #00cec9;
+}
+
+.footer_box .box1 span:nth-child(3) {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.7rem;
+  background-color: #00cec9;
+}
+
+.footer_box .box2 img {
+  height: 1.5rem;
+  position: absolute;
+  left: 3rem;
+  bottom: 1rem;
+}
+
+.footer_box .box3 {
+  position: absolute;
+  left: 5.2rem;
+  bottom: 0.7rem;
+}
+
+.footer_box .box3 p:nth-child(1) {
+  font-size: 0.8rem;
+}
+
+.footer_box .box3 p:nth-child(2) {
+  font-size: 0.6rem;
+}
+
+.footer_box .box4 {
+  position: absolute;
+  left: 15.2rem;
+  bottom: 0.9rem;
+}
+
+.footer_box .box4 i {
+  margin: 0 0.4rem;
+}
+
+.footer_box .box5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 26rem;
+  bottom: 0.9rem;
+}
+
+.footer_box .bar1 {
+  width: 30rem;
+  height: 0.1rem;
+  background-color: var(--common-color);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.footer_box .bar2 {
+  width: 50%;
+  height: 0.1rem;
+  background-color: rgb(4, 252, 252);
+}
+
+.footer_box .dot1 {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: rgb(4, 252, 252);
+  position: absolute;
+  left: 0;
+  top: -0.2rem;
+}
+
+.footer_box .dot2 {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid rgb(4, 252, 252);
+  border-radius: 50%;
+  position: absolute;
+  top: -0.48rem;
+  left: -0.3rem;
+}
+
+.footer_box .box5_input {
+  position: absolute;
+  top: -0.485rem;
+  left: -0.1rem;
+  width: 101%;
+  opacity: 0;
+  z-index: 9999999999;
+}
+
+.footer_box .box6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 1rem;
+  bottom: 1.2rem;
+}
+
+.footer_box .box6 i {
+  margin-right: 0.7rem;
+}
+
+.footer_box .vol_bar1 {
+  width: 8rem;
+  height: 0.1rem;
+  background-color: var(--common-color);
+  position: relative;
+}
+
+.footer_box .vol_bar2 {
+  width: 50%;
+  height: 0.1rem;
+  background-color: rgb(4, 252, 252);
+}
+
+.footer_box .vol_dot1 {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: rgb(4, 252, 252);
+  position: absolute;
+  left: 0;
+  top: -0.2rem;
+}
+
+.footer_box .vol_dot2 {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid rgb(4, 252, 252);
+  border-radius: 50%;
+  position: absolute;
+  top: -0.48rem;
+  left: -0.3rem;
+}
+
+.footer_box .box6_input {
+  position: absolute;
+  top: -0.485rem;
+  left: -0.1rem;
+  width: 101%;
+  opacity: 0;
+  z-index: 9999999999;
+}
+/* Footer Box Design Ends Here */
